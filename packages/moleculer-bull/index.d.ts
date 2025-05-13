@@ -5,8 +5,6 @@ declare module "moleculer-bull" {
   type QueueHandler = (job: Job) => Promise<any> | any;
 
   interface QueueSchema {
-    // completly replace the initial queueOpts
-    options?: QueueOptions;
     name?: string;
     concurrency?: number;
     process: QueueHandler;
