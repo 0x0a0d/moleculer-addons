@@ -1,6 +1,6 @@
 declare module "moleculer-bull" {
   import { ServiceSchema } from "moleculer";
-  import { Job } from "bull";
+  import { Job, QueueOptions } from "bull";
 
   type QueueHandler = (job: Job) => Promise<any> | any;
 
