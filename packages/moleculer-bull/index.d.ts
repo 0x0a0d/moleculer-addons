@@ -14,7 +14,7 @@ declare module "moleculer-bull" {
     queues?: Record<string, QueueHandler | QueueSchema | QueueSchema[]>;
   }
 
-  function createQueueService(url: string, queueOpts?: QueueOptions): BullServiceSchema;
+  const createQueueService: (url: string, queueOpts?: QueueOptions) => BullServiceSchema;
 
-  export = createQueueService;
+  export default createQueueService;
 }
